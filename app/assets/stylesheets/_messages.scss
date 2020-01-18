@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+ .main{
+  width: calc(100vw - 300px);
+  background-color: #fafafa;
+  float: left;
+  .main-header{
+    height: 100px;
+    width: calc(100vw - 300px);
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    top: 0px;                   /* 位置(上0px) */
+    right: 0px;                  /* 位置(右0px) */
+    }
+    .main-footer{
+    width: calc(100vw - 300px);
+    background-color: #d2d2d2;
+    height: 90px;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+    }
+ }
