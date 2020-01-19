@@ -2,7 +2,7 @@
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|content|text|null: false|
+|content|text||
 |image|string||
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
@@ -12,7 +12,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add_index: true|
+|name|string|index: true|
 |email|string|null: false, unique: true|
 ### Association
 - has_many :groups_users
@@ -21,7 +21,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, unique: true|
+|name|string|unique: true|
 ### Association
 - has_many :groups_users
 - has_many :users, through: groups_users
