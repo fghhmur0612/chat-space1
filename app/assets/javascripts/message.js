@@ -107,7 +107,7 @@ $('#new_message').on('submit', function(e){
     }
   })
   .fail(function() {
-    console.log('error');
+    alert("読み込み失敗");
   });
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
